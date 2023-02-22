@@ -102,4 +102,17 @@
             padding: 0px;
         }
     }
+
+    @media (max-width: 480px) {
+        .menu{
+            &__list{
+                display: none;
+            }
+        
+        }
+
+        .contact-list{
+            display: none;
+        }
+    }
 }

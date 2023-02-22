@@ -161,6 +161,14 @@ img {
   margin-right: 10px;
   padding: 0px;
 }
+@media (max-width: 480px) {
+  .page-header .menu__list {
+    display: none;
+  }
+  .page-header .contact-list {
+    display: none;
+  }
+}
 
 .backdrop {
   width: 100%;
@@ -395,6 +403,40 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .section-page .container {
+    width: 100%;
+    justify-content: center;
+  }
+  .section-page .section-page {
+    background-size: contain;
+    justify-content: center;
+    width: 100%;
+  }
+  .section-page .section-page__title {
+    font-size: 26px;
+  }
+  .section-page .section-page__button {
+    margin: 0;
+  }
+}
+@media (max-width: 480px) {
+  .section-page .container {
+    width: 100%;
+    justify-content: center;
+  }
+  .section-page .section-page {
+    background-size: contain;
+    justify-content: center;
+    width: 100%;
+  }
+  .section-page .section-page__title {
+    font-size: 26px;
+  }
+  .section-page .section-page__button {
+    margin: 0;
+  }
 }
 
 .characteristics__list {
