@@ -143,8 +143,8 @@
         </symbol>
 
         <symbol id="mobile-menu" viewBox="0 0 32 32">
-            <path d="M6.4 11.734v-2.134h19.2v2.134h-19.2zM6.4 17.066h19.2v-2.133h-19.2v2.133zM6.4 22.4h19.2v-2.134h-19.2v2.134z"></path>
-        </symbol>
+            <path d="M0 2.66667V0H24V2.66667H0ZM0 9.33333H24V6.66667H0V9.33333ZM0 16H24V13.3333H0V16Z"/>
+        </symbol> 
         
     </defs>
 </svg>
