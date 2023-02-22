@@ -1,0 +1,197 @@
+@use '../utils/variables';
+.footer{
+    background-color: variables.$background-secundary;
+
+    /*----------- contenedor de contacto -----------*/
+
+    .footer-cont{
+        display: flex;
+        padding-top: 60px;
+        padding-bottom: 60px;
+
+        /*----------- informacion de contacto -----------*/
+
+        .footer-contact{
+            margin-right: 70px ;
+
+            &__logo{
+                display: flex;
+                margin-bottom: 6px;
+                color: variables.$hover-color;
+                font-family: 'Raleway';
+                font-weight: 700;
+                font-size: 26px;
+                line-height: 1.2;
+                text-align: right;
+                letter-spacing: 0.03em;
+            }
+
+            &__span{
+                color: variables.$secundary-color;
+            }
+
+            &__list{
+                width: 231px;
+                line-height: 1.5;
+                letter-spacing: 0.03em;
+            }
+
+            &__dir{
+                color: variables.$background-primary;
+                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                &:hover, &:focus{
+                    color: variables.$hover-color;
+                    fill: variables.$hover-color; 
+                }
+            }
+
+            &__item{
+                display: flex;
+                margin-bottom: 9px;
+                color: variables.$secundary-color;
+                transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                &:hover, &:focus{
+                    color: variables.$hover-color;
+                    fill: variables.$hover-color; 
+                }
+            }
+        }
+
+        /* --------------- Redes sociales --------------- */
+
+        .cont-social{
+            flex-direction: column;
+            width: 206px;
+            margin-right: 90px;
+
+            &__title{
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 16px;
+                letter-spacing: 0.03em;
+                text-transform: uppercase;
+                color: variables.$background-primary;
+            }
+
+            .social-cont{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 28px;  
+
+            &__item{
+                display: flex;
+                flex-basis: calc((100% - 30px) / 4); 
+            }
+
+            &__icon{
+                border-radius: 50%;
+                height: 44px;
+                padding: 12px;
+                background-color: rgba(255, 255, 255, 0.1);
+                fill: variables.$background-primary;
+                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                &:hover, &:focus{
+                outline: none;
+                background-color: variables.$hover-color;
+                fill: variables.$background-primary;
+                }
+            }
+        }
+
+        .social{
+            margin-top: 16px;
+        }
+        }
+
+        /* -------------- Formulario  -------------- */
+
+        .form-email{
+            flex-direction: column;
+
+            .footer-form{
+                display: flex;
+                width: 570px;
+                height: 86px;
+
+                &__label{
+                    color: variables.$background-primary;
+                    width: 358px;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 16px;
+                    letter-spacing: 0.03em;
+                    text-transform: uppercase;
+                    margin-right: 12px;
+                }
+
+                &__input{
+                    margin-top: 20px ;
+                    background-color: variables.$background-secundary;
+                    width: 358px;
+                    height: 50px;
+                    padding-left: 16px;
+
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+                    border-radius: 4px;
+                    color: rgba(255, 255, 255, 0.6); 
+                    transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                    &:hover, &:focus{
+                        outline: 1px solid variables.$hover-color;
+                    }
+                }
+
+                &__button{  
+                    display: flex; 
+                    position: relative;
+                    width: 200px;
+                    height: 50px;    
+                    margin-top: 36px;
+                    padding: 0;
+                    cursor: pointer;
+                    border: none;
+                    background: variables.$hover-color;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+                    border-radius: 4px;
+                    
+                    &:hover, &:focus{
+                        outline: 1px solid variables.$hover-color;
+                    }
+                }
+
+                &__span{
+                    position: absolute;
+                    left: 39px;
+                    top: 10px;
+
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 30px;
+                    letter-spacing: 0.06em;
+                    text-transform: capitalize;
+
+                    color: variables.$background-primary;
+                }
+
+                &__icon {
+                    position: absolute;
+                    left: 148px;
+                    top: 13px;
+                }
+            }
+        }
+    }       
+}
+
+
+
+
+
+
+

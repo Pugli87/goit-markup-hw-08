@@ -1,0 +1,246 @@
+@use '../utils/variables';
+
+.backdrop{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: fixed; 
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    opacity: 1;
+    background-color: rgb(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.is-hidden{
+    visibility:hidden;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;   
+    WIdth: 528px;
+    height: 581px;
+    padding: 40px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &__button{
+        position: absolute;
+        top: 6.5px;
+        right: 8px;
+        cursor: pointer;
+        margin-top: 8px;
+        margin-right: 8px;
+        padding: 6px; 
+        width: 30px;
+        height: 30px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: variables.$background-primary;
+        border-radius: 50%;
+        fill: var(--body-color);
+        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+        &:hover, &:focus{
+            fill: variables.$hover-color;
+            outline: 1px solid rgba(0, 0, 0, 0.1);
+        }
+    }
+    
+    .backdrop.is-hidden & {
+        transform: translate(-50%, -50%) scale(0.5);
+    }
+
+
+}  
+
+/* Estilos del formulario */
+.form{
+    display: flex;
+    flex-direction: column;
+
+    &__button{
+        display: flex;
+        width: 200px;
+        height: 50px;
+    
+        margin: 0 auto;
+        justify-content: center;
+        align-items: center;
+    
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 30px;
+        letter-spacing: 0.06em;
+    
+        background-color: variables.$hover-color;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        border-radius: 4px;
+    
+        border: none;
+        color: variables.$background-primary;
+        text-transform: capitalize;
+    }
+
+    .group{
+    margin-bottom: 10px;
+
+        &__title{
+            width: 100%;
+            height: 23px;
+            margin-bottom: 12px;
+
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 23px;
+            text-align: center;
+            letter-spacing: 0.03em;
+
+            color: variables.$primary-color;
+        }
+
+        &__label{
+            display: flex;
+            flex-direction: column;
+
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.01em;
+            text-transform: capitalize;
+
+            color: variables.$secundary-color;  
+            margin-bottom: 10px;  
+        }
+
+        &__cont{
+            position: relative;
+            margin-top: 4px;
+        }
+
+        &__input{
+            border: 1px solid variables.$secundary-color;
+            
+            padding-top: 12px;
+            padding-right: 12px;
+            padding-bottom: 12px;
+            padding-left: 42px;
+            width: 100%;
+            
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            border-radius: 4px;
+            fill: variables.$primary-color;
+            transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            &:hover{
+                border: 1px solid variables.$hover-color;
+            }
+        }
+
+        &__svg{
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 18px;
+            height: 18px;
+            fill: #212121;
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+            .group__input:hover + &,
+            .group__input:focus + &{
+                fill: variables.$hover-color;
+            }
+        }
+
+        &__textarea{
+            margin-top: 4px;
+            width: 100%;
+            height: 120px;
+            padding: 12px 16px;
+
+            border: 1px solid rgba(33, 33, 33, 0.2);
+            border-radius: 4px;
+            resize: none;
+
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;
+            letter-spacing: 0.01em;
+
+            &:hover{
+                border: 1px solid variables.$hover-color;
+            }
+
+            &::placeholder{
+                color: rgba(117, 117, 117, 0.5);
+            }
+        }
+    }
+
+    .checkbox{ 
+        position: relative;
+        text-align: center;
+        margin-bottom: 10px;
+
+        &__label{
+            display: flex;
+        }
+
+    &__input{    
+            appearance: none;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+
+        &__svg{
+            position: absolute;
+            display: flex;
+            top: 27%;
+            left: 0%;
+            transform: translateY(-50%);
+            justify-content: center;
+            align-items: center;
+            fill: transparent;
+            width: 16px;
+            height: 15px;
+            border: 2px solid variables.$primary-color;
+            border-radius: 2px;
+            transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+            border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+            
+            .checkbox__input:checked + & {
+                border-color: variables.$hover-color;
+                background-color: variables.$hover-color;
+            }
+
+        }
+
+        &__text{  
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 24px;
+
+            letter-spacing: 0.03em;
+
+            color: variables.$secundary-color;
+            padding-left: 24px;
+            text-align: left;
+        }
+    }
+}
+
+
+
