@@ -30,4 +30,17 @@
             fill: variables.$hover-color;
         }
     }   
+
+    @media screen and (max-width: 480px){
+    
+        &__item{
+            flex-basis: calc(( 100% - 30px ) / 2);
+        }
+
+        &__icon{
+            width: 210px;
+            height: 92px;
+        }
+
+    }
 }
