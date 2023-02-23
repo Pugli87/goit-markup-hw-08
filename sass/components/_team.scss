@@ -70,4 +70,21 @@
             }
         }
     }
+
+    @media screen and (max-width: 480px){
+        
+        &__list{
+            flex-direction: column;
+        }
+
+        &__item{
+            width: 100%;
+
+            img{
+                width: 100%;
+            }
+        }
+
+
+    }
 }
