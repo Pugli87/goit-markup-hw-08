@@ -37,9 +37,10 @@
     
 
     @media (max-width: 480px) {
+        //border: 1px solid rgb(236, 15, 15);
+
         .section-page{
-            background-size: contain;
-            width: 100%;
+            //width: 100%;
 
             &__title{
                 font-size: 26px;
