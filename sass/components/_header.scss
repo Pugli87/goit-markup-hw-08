@@ -75,32 +75,33 @@
                 min-height: 80px;
                 display: flex;
                 align-items: center;
-                justify-content: space-around;
+                justify-content: space-between;
 
                 .menu{
                     display: none;
                 }
 
                 .nav{
-                    background-color: aquamarine;
                     display: flex;
                     align-items: center;
-                    
-                    
+
                     &__logo{
                         color: variables.$hover-color;
-                        font-family: 'Raleway';
-                        font-style: normal;
+                        //font-family: 'Raleway';
+                        //font-style: normal;
                         font-weight: 700;
-                        font-size: 28px;
+                        font-size: 24px;
                         line-height: 1.08;
                         text-align: right;
                         letter-spacing: 0.03em;
+                        margin-right: 93px;
                     }
 
                     &__list{
+                        height: 80px;
                         display: flex;
-                        align-items: center;
+                       // align-items: center;
+                       // text-align: center;
                     }
 
                     &__item:not(:last-child){
@@ -108,16 +109,18 @@
                     }
 
                     &__item{
-
+                        display: flex;
+                        height: 100%;
                     }
 
                     &__link{
                         display: flex;
                         font-weight: 500;
-                        line-height: 1.2;
+                        font-size: 14px;
+                        line-height: 16px;
                         letter-spacing: 0.02em;
                         align-items: center;
-                        color: variables.$primary-color;
+                        //color: variables.$primary-color;
                         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
                         &:hover, &:focus{
@@ -145,20 +148,19 @@
                 }
 
                 .contact-list{
-                    background-color: chocolate;
-                    margin: 0;
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: flex-start;
-                    margin-left: auto;
+                    justify-content: flex-end;
+
+                    &__item:not(:last-child){
+                        margin-bottom: 10px;
+                    }
         
-                    &__link{  
-                        display: flex;     
-                        justify-content: center;
-                        //padding-top: 32px;
-                        //padding-bottom: 32px;
+                    &__link{
+                        //display: flex;     
+                        //justify-content: center;
                         font-weight: 500;
+                        font-size: 12px;
                         line-height: 1.2;
                         letter-spacing: 0.02em;
                         color: variables.$secundary-color;
@@ -173,14 +175,14 @@
         
                     &__icon{
                         margin-right: 10px;
-                        padding: 0px;
+                        //padding: 0px;
                     }
                 }
             }
         }
     }
 
-    @media (min-width: 769px) and (max-width:1200px){
+    @media (min-width: 769px) and (max-width:1199px){
         width: 100%;
         
         .header{
@@ -188,12 +190,11 @@
            // min-width: 768px;
             //max-width: 100%;
             &__container{
-                background-color: rgb(109, 108, 108);
                 display: flex;
                 width: 100%;
                 .menu{
                     &__button{
-                            display: none;
+                            //display: none;
                     }
                 }
 
@@ -201,7 +202,6 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    background-color: aquamarine;
                     &__list{
 
                     }
@@ -216,10 +216,10 @@
                 }
 
                 .contact-list{
-                    background-color: brown;
-                    margin-right: 50px;
                     display: flex;
-                    flex-direction: row;
+                    //margin-right: 50px;
+                    display: flex;
+                    //flex-direction: row;
                     justify-content: center;
 
                     &__item{
