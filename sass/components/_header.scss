@@ -3,12 +3,12 @@
 .header{
     display: block;
     width: 480px;
-    height: 60px;
+    height: 80px;
     border-bottom: 1px solid #ECECEC;
 
     &__container{
         width: 100%;
-        height: 100%;
+        height: 60px;
         display: flex;
         align-items: center;
     
@@ -67,12 +67,12 @@
     }
 
     @media (min-width: 481px) {
-        max-width: 100%;
         .header{
+            width: 100%;
+            height: 80px;
             &__container{ 
-                //quede aqui arreglando el width <-----------------------------
-                max-width: 768px;
-                height: 80px;
+                min-width: 768px;
+                min-height: 80px;
                 display: flex;
                 align-items: center;
                 justify-content: space-around;
@@ -126,7 +126,7 @@
                         }
 
                         &--select{ 
-                            height: 80px;
+                            height: 100%;
                             color: variables.$hover-color;
                             position: relative;
                         }
