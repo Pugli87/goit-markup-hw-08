@@ -1,7 +1,7 @@
 @use '../utils/variables';
 
 .backdrop{
-    width: 100%;
+    width: 480px;
     height: 100%;
     display: flex;
     position: fixed; 
@@ -24,8 +24,8 @@
     top: 50%;
     left: 50%;
     display: flex;   
-    WIdth: 528px;
-    height: 581px;
+    width: 450px;
+    height: 609px;
     padding: 40px;
     background-color: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -157,11 +157,11 @@
             height: 18px;
             fill: #212121;
             transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
 
-            .group__input:hover + &,
-            .group__input:focus + &{
-                fill: variables.$hover-color;
-            }
+        &__input:hover + .group__svg,
+        &__input:focus + .group__svg{
+            fill: variables.$hover-color;
         }
 
         &__textarea{
@@ -220,12 +220,11 @@
             border-radius: 2px;
             transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
             border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-            
-            .checkbox__input:checked + & {
-                border-color: variables.$hover-color;
-                background-color: variables.$hover-color;
-            }
+        }
 
+        &__input:checked + .checkbox__svg {
+            border-color: variables.$hover-color;
+            background-color: variables.$hover-color;
         }
 
         &__text{  

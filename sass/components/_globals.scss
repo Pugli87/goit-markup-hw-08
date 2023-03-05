@@ -6,6 +6,7 @@
 }
 
 body{
+    display: block;
     font-size: 14px;
     font-family: "roboto", sans-serif;
     letter-spacing:  10px;
@@ -56,32 +57,23 @@ outline: 1px solid variables.$hover-color;
 } 
 
 .container{
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
+    max-width: 1200px;
+    padding: 0 15px;
     margin: 0 auto;
 }
 
 .section{
-    padding: 94px 0;
+    max-width: 1200px;
+    padding: 60px 0;
 }
 
 .name-section{
+    max-width: 1200px;
     font-weight: 700;
-    font-size: 36px;
+    font-size: 28px;
     line-height: 42px;
     text-align: center;
     letter-spacing: 0.03em;
     margin-bottom: 55.05px;
     text-transform: capitalize;
-}
-
-@media screen and (max-width: 480px){
-    .section{
-        padding-top: 60px;
-        padding-bottom: 60px;
-    }
-    .container{
-        width:  480px,
-    }
 }

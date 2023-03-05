@@ -1,5 +1,7 @@
 @use '../utils/variables';
 .footer{
+    display: flex;
+    width: 480px;
     background-color: variables.$background-secundary;
 
     /*----------- contenedor de contacto -----------*/
@@ -8,38 +10,43 @@
         display: flex;
         padding-top: 60px;
         padding-bottom: 60px;
+        flex-direction: column;
 
         /*----------- informacion de contacto -----------*/
 
         .footer-contact{
-            margin-right: 70px ;
+            margin-bottom: 60px;
 
             &__logo{
                 display: flex;
-                margin-bottom: 6px;
+                justify-content: center;
+                margin-bottom: 28px;
                 color: variables.$hover-color;
                 font-family: 'Raleway';
                 font-weight: 700;
                 font-size: 26px;
                 line-height: 1.2;
-                text-align: right;
                 letter-spacing: 0.03em;
             }
 
             &__span{
-                color: variables.$secundary-color;
+                color: variables.$background-primary;
             }
 
             &__list{
-                width: 231px;
+                
+                width: 100%;
                 line-height: 1.5;
                 letter-spacing: 0.03em;
+                text-align: center;
             }
 
             &__dir{
+                display: flex;
+                justify-content: center;
+                margin-bottom: 12px;
                 color: variables.$background-primary;
                 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
                 &:hover, &:focus{
                     color: variables.$hover-color;
                     fill: variables.$hover-color; 
@@ -48,7 +55,8 @@
 
             &__item{
                 display: flex;
-                margin-bottom: 9px;
+                justify-content: center;
+                margin-bottom: 12px;
                 color: variables.$secundary-color;
                 transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -63,8 +71,8 @@
 
         .cont-social{
             flex-direction: column;
-            width: 206px;
-            margin-right: 90px;
+            width: 100%;
+            margin-bottom: 60px;
 
             &__title{
                 font-weight: 700;
@@ -73,68 +81,74 @@
                 letter-spacing: 0.03em;
                 text-transform: uppercase;
                 color: variables.$background-primary;
+                margin-bottom: 20px;
+                text-align: center;
             }
 
             .social-cont{
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            margin-top: 28px;  
-
-            &__item{
                 display: flex;
-                flex-basis: calc((100% - 30px) / 4); 
-            }
+                justify-content: center;
+                margin-top: 28px;  
 
-            &__icon{
-                border-radius: 50%;
-                height: 44px;
-                padding: 12px;
-                background-color: rgba(255, 255, 255, 0.1);
-                fill: variables.$background-primary;
-                transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                &__item{
+                    display: flex; 
+                }
 
-                &:hover, &:focus{
-                outline: none;
-                background-color: variables.$hover-color;
-                fill: variables.$background-primary;
+                &__item:not(:last-child){
+                    margin-right: 10px;
+                }
+
+                &__icon{
+                    border-radius: 50%;
+                    height: 44px;
+                    padding: 12px;
+                    background-color: rgba(255, 255, 255, 0.1);
+                    fill: variables.$background-primary;
+                    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+                    &:hover, &:focus{
+                    outline: none;
+                    background-color: variables.$hover-color;
+                    fill: variables.$background-primary;
+                    }
                 }
             }
-        }
 
-        .social{
-            margin-top: 16px;
-        }
         }
 
         /* -------------- Formulario  -------------- */
 
         .form-email{
+            max-width:100%;
+            height: 156px;
             flex-direction: column;
 
             .footer-form{
-                display: flex;
-                width: 570px;
+                flex-direction: column;
+                justify-content: center;
+                width: 100%;
                 height: 86px;
 
-                &__label{
+                &__title{
                     color: variables.$background-primary;
-                    width: 358px;
+                    width: 100%;
                     font-weight: 700;
                     font-size: 14px;
                     line-height: 16px;
                     letter-spacing: 0.03em;
                     text-transform: uppercase;
-                    margin-right: 12px;
+                   // margin-right: 12px;
+                    margin-bottom: 20px;
+                    text-align: center;
                 }
 
                 &__input{
-                    margin-top: 20px ;
                     background-color: variables.$background-secundary;
-                    width: 358px;
+                    width: 100%;
                     height: 50px;
                     padding-left: 16px;
+                    margin-bottom: 20px;
 
                     border: 1px solid rgba(255, 255, 255, 0.3);
                     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -147,13 +161,14 @@
                     }
                 }
 
-                &__button{  
-                    display: flex; 
+                &__button{ 
+                    margin-left: auto; 
+                    margin-right: auto;
+                    display: flex;
                     position: relative;
                     width: 200px;
                     height: 50px;    
-                    margin-top: 36px;
-                    padding: 0;
+                    padding: 10px;
                     cursor: pointer;
                     border: none;
                     background: variables.$hover-color;
