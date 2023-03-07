@@ -40,3 +40,26 @@
         background-color: rgba(47, 48, 58, 0.8);
     }
 }
+
+@media (min-width:768px){
+    .product{
+        width: 768px;
+
+        &__list{
+            flex-direction: row;            
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        &__item{
+            flex-basis: calc(( 100% - 60px ) / 3);
+
+        }
+
+        &__title{
+
+        }
+
+    }
+    
+}
