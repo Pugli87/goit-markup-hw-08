@@ -1,7 +1,7 @@
 @use '../utils/variables';
 
 .hero{ 
-    min-width: 100%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     padding: 118px 0;
@@ -16,7 +16,7 @@
         margin-right: auto;
         &__title{
             margin: 0 auto 30px;
-        
+            max-width: 360px;
             color: variables.$background-primary;
             font-weight: 900;
             font-size: 26px;
@@ -26,7 +26,7 @@
         }
         
         &__button{
-            width: 200px;
+            max-width: 200px;
             height: 50px;
             cursor: pointer;
             
