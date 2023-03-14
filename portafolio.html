@@ -13,6 +13,60 @@
     <link rel="stylesheet" href="css/main.css">
   </head>
   <body>
+
+    <div class="menu-container js-menu-container" >
+
+      <button class="menu-toggle js-close-menu" aria-label="boton de cierre">
+        <svg width="19px" height="19px">
+          <use href="./imagenes/icon.svg#icon-close"></use>
+        </svg>        
+      </button>
+      
+      <nav class="mobile-menu">
+        <ul class="mobile-menu__list">
+          <li class="mobile-menu__item">
+            <a href="./index.html" class="mobile-menu__link mobile-menu__link--select" >Estudio</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="./portafolio.html" class="mobile-menu__link" >Portafolio</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a href="#" class="mobile-menu__link" >Contactos</a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mobile-contact">
+        <ul class="mobile-contact__list">
+          <li class="mobile-contact__item mobile-contact__item">
+            <a href="tel:+525555296000" class="mobile-contact__link mobile-contact__link--tel" >
+              +1 212-772-4150
+            </a>
+          </li>
+          <li class="mobile-contact__item ">
+            <a href="mailto:info@devstudio.com" class="mobile-contact__link mobile-contact__link--mail"  >
+              info@devstudio.com
+            </a>
+          </li>
+        </ul>
+
+        <ul class="mobile-contact__social list">
+          <li class="mobile-contact__item--social">
+            <a class="mobile-contact__link mobile-contact__link--social link" href="#" target="_blank" rel="noopener noreferrer">Instagram</a>
+          </li>
+          <li class="mobile-contact__item--social">
+            <a class="mobile-contact__link mobile-contact__link--social link" href="#" target="_blank" rel="noopener noreferrer">Twitter</a>
+          </li>
+          <li class="mobile-contact__item--social">
+            <a class="mobile-contact__link mobile-contact__link--social link" href="#" target="_blank" rel="noopener noreferrer">Facebook</a>
+          </li>
+          <li class="mobile-contact__item--social">
+            <a class="mobile-contact__link mobile-contact__link--social link" href="#" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
     <!-- Cabecera -->
     <header class="header">
       <div class="header__container container ">
@@ -57,30 +111,30 @@
     </header>
     <!-- Cuerpo -->
     <main>
-      <section class="section">
-        <div class="container ">
+      <section class="section section-briefcase">
+        <div class="container">
           <!---------- Contenedor  de Botones ---------->
 
           <h1 hidden>Portafolio</h1>
-          <ul class="briefcase-list">
-            <li class="briefcase-list__item">
-              <button class="briefcase-list__button" type="button">Todo</button>
+          <ul class="briefcase">
+            <li class="briefcase__item">
+              <button class="briefcase__button" type="button">Todo</button>
             </li>
-            <li class="briefcase-list__item">
-              <button class="briefcase-list__button" type="button">
+            <li class="briefcase__item">
+              <button class="briefcase__button" type="button">
                 Sitio-web
               </button>
             </li>
-            <li class="briefcase-list__item"> 
-              <button class="briefcase-list__button" type="button">
+            <li class="briefcase__item"> 
+              <button class="briefcase__button" type="button">
                 Aplicaciones
               </button>
             </li>
-            <li class="briefcase-list__item">
-              <button class="briefcase-list__button" type="button">Diseño</button>
+            <li class="briefcase__item">
+              <button class="briefcase__button" type="button">Diseño</button>
             </li>
-            <li class="briefcase-list__item">
-              <button class="briefcase-list__button" type="button">
+            <li class="briefcase__item">
+              <button class="briefcase__button" type="button">
                 Marketing
               </button>
             </li>
@@ -92,9 +146,10 @@
 
             <li class="card__item">
               <a href="#">
-                <div class="card__img">
-                  <img src="./imagenes/imagenp1.jpg" alt="Tecnoduck"/>
-                <p class="card__transition">
+                <div class="card__wrapper">
+                  <img src="./imagenes/imagenp1.jpg" alt="Tecnoduck" class="card__img" />
+
+                  <p class="card__transition">
                   Tecnoduck es una plataforma de distribución de coronavirus de última 
                   generación. Las compañías usan esta plataforma para el espionaje 
                   digital y los ataques a los servidores seguros de la competencia.
@@ -111,8 +166,8 @@
 
             <li class="card__item">
               <a href="#">
-                <div class="card__img">
-                  <img src="./imagenes/imagenp2.jpg" alt="Póster de Nueva Orleans vs Estrella Dorada"/>
+                <div class="card__wrapper">
+                  <img src="./imagenes/imagenp2.jpg" alt="Póster de Nueva Orleans vs Estrella Dorada" class="card__img" />
                   <p class="card__transition">
                     Tecnoduck es una plataforma de distribución de coronavirus de última 
                     generación. Las compañías usan esta plataforma para el espionaje 
@@ -130,8 +185,8 @@
             <li class="card__item">
               <a href="#">
 
-                <div class="card__img">
-                  <img src="./imagenes/imagenp3 .jpg" alt="Restaurante Seafood"/>
+                <div class="card__wrapper">
+                  <img src="./imagenes/imagenp3 .jpg" alt="Restaurante Seafood" class="card__img" />
                   <p class="card__transition">
                     Tecnoduck es una plataforma de distribución de coronavirus de última 
                     generación. Las compañías usan esta plataforma para el espionaje 
@@ -151,8 +206,8 @@
             <li class="card__item">
               <a href="#">
 
-                <div class="card__img">
-                  <img src="./imagenes/imagenp4.jpg" alt="Audifonos"/>
+                <div class="card__wrapper">
+                  <img src="./imagenes/imagenp4.jpg" alt="Audifonos" class="card__img" />
                   <p class="card__transition">
                     Tecnoduck es una plataforma de distribución de coronavirus de última 
                     generación. Las compañías usan esta plataforma para el espionaje 
@@ -170,8 +225,8 @@
             <li class="card__item">
               <a href="#">
 
-                <div class="card__img">
-                  <img src="./imagenes/imagenp5.jpg" alt="Cajas"/>
+                <div class="card__wrapper">
+                  <img src="./imagenes/imagenp5.jpg" alt="Cajas" class="card__img" />
                   <p class="card__transition">
                     Tecnoduck es una plataforma de distribución de coronavirus de última 
                     generación. Las compañías usan esta plataforma para el espionaje 
@@ -189,8 +244,8 @@
             <li class="card__item">
               <a href="#">
 
-                <div class="card__img">
-                  <img src="./imagenes/imagenp6.jpg" alt="Una pantalla"/>
+                <div class="card__wrapper">
+                  <img src="./imagenes/imagenp6.jpg" alt="Una pantalla" class="card__img" />
                   <p class="card__transition">
                     Tecnoduck es una plataforma de distribución de coronavirus de última 
                     generación. Las compañías usan esta plataforma para el espionaje 
@@ -208,8 +263,8 @@
             <li class="card__item">
               <a href="#">
 
-                <div class="card__img">
-                  <img src="./imagenes/imagenp7.jpg" alt="Un libro abierto"/>
+                <div class="card__wrapper">
+                  <img src="./imagenes/imagenp7.jpg" alt="Un libro abierto" class="card__img" />
                   <p class="card__transition">
                     Tecnoduck es una plataforma de distribución de coronavirus de última 
                     generación. Las compañías usan esta plataforma para el espionaje 
@@ -227,8 +282,8 @@
             <li class="card__item">
               <a href="#">
 
-                <div class="card__img">
-                  <img src="./imagenes/imagenp8.jpg" alt="Una etiqueta"/>
+                <div class="card__wrapper">
+                  <img src="./imagenes/imagenp8.jpg" alt="Una etiqueta" class="card__img" />
                   <p class="card__transition">
                     Tecnoduck es una plataforma de distribución de coronavirus de última 
                     generación. Las compañías usan esta plataforma para el espionaje 
@@ -246,8 +301,8 @@
             <li class="card__item">
               <a href="#">
                 
-                <div class="card__img">
-                  <img src="./imagenes/imagenp9.jpg" alt="Un portatil"/>
+                <div class="card__wrapper">
+                  <img src="./imagenes/imagenp9.jpg" alt="Un portatil" class="card__img" />
                   <p class="card__transition">
                     Tecnoduck es una plataforma de distribución de coronavirus de última 
                     generación. Las compañías usan esta plataforma para el espionaje 
@@ -346,5 +401,14 @@
 
       </div>
     </footer>
+
+    <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+    integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+    crossorigin="anonymous"
+  ></script>
+
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
