@@ -41,3 +41,12 @@
         }
     }
 }
+
+@media (min-width:1200px){
+    .client{
+        width: 100%;
+        &__item{
+            flex-basis: calc(( 100% - 150px ) / 6);
+        }
+    }
+}

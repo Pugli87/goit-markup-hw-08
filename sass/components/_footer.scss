@@ -13,7 +13,7 @@
         min-width: 100%;
         margin:0;
         display: flex;
-        text-aling: center;
+        text-align: center;
         flex-direction: column;
         
 
@@ -126,7 +126,6 @@
 
         .form-email{
             max-width:100%;
-            //height: 156px;
             flex-direction: column;
 
             .footer-form{
@@ -151,7 +150,6 @@
                 &__input{
                     background-color: variables.$background-secundary;
                     width: 100%;
-                    //height: 50px;
                     padding: 14px 16px;
                     margin-bottom: 20px;
 
@@ -209,105 +207,184 @@
     }       
 }
 
-@media (min-width:1200px) {
+@media (min-width:768px) {
     
     .footer{
         min-width: 100%;
 
         /*----------- contenedor de contacto -----------*/
     
-        .footer-cont{  
-            max-width:1200px;
+        .footer-cont{
+            position:relative;
+            min-width: 768px;  
+            height: 464px;
             flex-direction:row;
             margin-left: auto;
             margin-right: auto;
             /*----------- informacion de contacto -----------*/
     
             .footer-contact{
-    
-                width:215px;
-                &__logo{
-
-                }
-    
-                &__span{
-
-                }
+                margin-bottom:0;
+                margin-left: 60px ;
+                margin-right:165px;
     
                 &__list{
-
-                }
-    
-                &__dir{
-
-                }
-    
-                &__item{
-
+                    width:215px;
                 }
             }
     
             /* --------------- Redes sociales --------------- */
     
             .cont-social{
-    
-                &__title{
-
-                }
-    
+                margin: 0;
+                width: 206px;
+                //margin-left: 165px;
                 .social-cont{
-    
-                    &__item{
-
-                    }
-    
                     &__item:not(:last-child){
                         margin-right: 10px;
                     }
-    
-                    &__icon{
-
-                    }
                 }
-    
             }
     
             /* -------------- Formulario  -------------- */
     
             .form-email{
-                width: 670px;
+                position: absolute;
+                top: 284px;
+                left: 168px;
+                flex-direction: column;
+                width: 450px;
     
                 .footer-form{
                     display:flex;
                     flex-direction:row;
-                    
-
     
-                    // &__title{
-
-                    // }
-    
-                     &__input{
-                        width: 358px;
+                    &__input{
+                        width: 450px;
                         margin-right: 12px;
-
-                     }
+                    }
     
-                     &__button{ 
-                        width:200px
-                     }
-    
-                    // &__span{
-
-                    // }
-    
-                    // &__icon {
-
-                    // }
+                    &__button{ 
+                        position: absolute;
+                        top: 110px;
+                        min-width:200px
+                    }
                 }
             }
         }       
-    }
+    }   
+}
+
+@media (min-width:1200px) {
+
+
+    .footer{
+        min-width: 100%;
+
+        /*----------- contenedor de contacto -----------*/
+    
+        .footer-cont{
+            height: auto;
+            position:static;
+            min-width: 1200px;  
+            flex-direction:row;
+            margin-left: auto;
+            margin-right: auto;
+            /*----------- informacion de contacto -----------*/
+    
+            .footer-contact{
+                margin-bottom:0;
+                margin-left: 0 ;
+                margin-right: 70px;
+                display: flex;
+                flex-direction:column;
+                align-items:flex-start;
+
+    
+                &__list{
+                    display: flex;
+                    flex-direction:column;
+                    align-items:flex-start;
+                    width: 215px;
+                }
+
+            }
+    
+            /* --------------- Redes sociales --------------- */
+    
+            .cont-social{
+                margin: 0;
+                width: 206px;
+                margin-right: 109px;
+                .social-cont{
+                    &__item:not(:last-child){
+                        margin-right: 10px;
+                    }
+                }
+            }
+    
+            /* -------------- Formulario  -------------- */
+    
+            .form-email{
+                position: static;
+
+                flex-direction: column;
+                width: 570px;
+    
+                .footer-form{
+                    display:flex;
+                    flex-direction:row;
+
+                    &__title {
+                        text-align: initial;
+                    }
+    
+                    &__input{
+                        width: 358px;
+                        margin-right: 12px;
+                        margin-bottom: 0px;
+                    }
+
+                    &__button{ 
+                        display: flex;
+                        position: relative;
+                        top: 0;
+                        width: 200px;    
+                        padding: 10px;
+                        cursor: pointer;
+                        border: none;
+                        background: variables.$hover-color;
+                        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+                        border-radius: 4px;
+                        
+                        &:hover, &:focus{
+                            outline: 1px solid variables.$hover-color;
+                        }
+                    }
+    
+                    &__span{
+                        position: absolute;
+                        left: 39px;
+                        top: 10px;
+    
+                        font-weight: 700;
+                        font-size: 16px;
+                        line-height: 30px;
+                        letter-spacing: 0.06em;
+                        text-transform: capitalize;
+    
+                        color: variables.$background-primary;
+                    }
+    
+                    &__icon {
+                        position: absolute;
+                        left: 148px;
+                        top: 13px;
+                    }
+                }
+            }
+        }       
+    } 
     
 }
 
