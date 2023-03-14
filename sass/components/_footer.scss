@@ -2,7 +2,7 @@
 .footer{
     padding: 60px 0;
     display: flex;
-    width: 480px;
+    min-width: 100%;
     background-color: variables.$background-secundary;
     margin-left: auto;
     margin-right: auto;
@@ -10,7 +10,7 @@
     /*----------- contenedor de contacto -----------*/
 
     .footer-cont{
-        min-width: 100%;
+       width: 100%;
         margin:0;
         display: flex;
         text-align: center;
@@ -149,7 +149,7 @@
 
                 &__input{
                     background-color: variables.$background-secundary;
-                    width: 450px;
+                    min-width: 100%;
                     padding: 14px 16px;
                     margin-bottom: 20px;
 

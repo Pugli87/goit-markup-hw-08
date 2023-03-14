@@ -155,7 +155,7 @@ img {
 
 @media (max-width: 767px) {
   .header__container {
-    width: 480px;
+    width: 100%;
     justify-content: space-between;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -481,7 +481,7 @@ img {
   background-position: 50% 50%;
 }
 .hero .hero-cont {
-  width: 360px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -510,7 +510,7 @@ img {
 
 @media (max-width: 479px) {
   .hero {
-    width: 480px;
+    width: 100%;
   }
 }
 @media (min-width: 768px) {
@@ -535,7 +535,7 @@ img {
   }
 }
 .characteristics {
-  width: 480px;
+  min-width: 100%;
   letter-spacing: 0.03em;
 }
 .characteristics__list {
@@ -733,7 +733,7 @@ img {
   }
 }
 .client {
-  width: 450px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
@@ -776,14 +776,14 @@ img {
 .footer {
   padding: 60px 0;
   display: flex;
-  width: 480px;
+  min-width: 100%;
   background-color: #2F303A;
   margin-left: auto;
   margin-right: auto;
   /*----------- contenedor de contacto -----------*/
 }
 .footer .footer-cont {
-  min-width: 100%;
+  width: 100%;
   margin: 0;
   display: flex;
   text-align: center;
@@ -898,7 +898,7 @@ img {
 }
 .footer .footer-cont .form-email .footer-form__input {
   background-color: #2F303A;
-  width: 450px;
+  min-width: 100%;
   padding: 14px 16px;
   margin-bottom: 20px;
   border: 1px solid rgba(255, 255, 255, 0.3);
