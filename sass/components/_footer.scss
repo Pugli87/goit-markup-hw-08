@@ -1,16 +1,21 @@
 @use '../utils/variables';
 .footer{
+    padding: 60px 0;
     display: flex;
-    width: 480px;
+    min-width: 480px;
     background-color: variables.$background-secundary;
+    margin-left: auto;
+    margin-right: auto;
 
     /*----------- contenedor de contacto -----------*/
 
     .footer-cont{
+        min-width: 100%;
+        margin:0;
         display: flex;
-        padding-top: 60px;
-        padding-bottom: 60px;
+        text-aling: center;
         flex-direction: column;
+        
 
         /*----------- informacion de contacto -----------*/
 
@@ -121,14 +126,14 @@
 
         .form-email{
             max-width:100%;
-            height: 156px;
+            //height: 156px;
             flex-direction: column;
 
             .footer-form{
                 flex-direction: column;
                 justify-content: center;
-                width: 100%;
-                height: 86px;
+                //width: 100%;
+               // height: 86px;
 
                 &__title{
                     color: variables.$background-primary;
@@ -146,8 +151,8 @@
                 &__input{
                     background-color: variables.$background-secundary;
                     width: 100%;
-                    height: 50px;
-                    padding-left: 16px;
+                    //height: 50px;
+                    padding: 14px 16px;
                     margin-bottom: 20px;
 
                     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -202,6 +207,108 @@
             }
         }
     }       
+}
+
+@media (min-width:1200px) {
+    
+    .footer{
+        min-width: 100%;
+
+        /*----------- contenedor de contacto -----------*/
+    
+        .footer-cont{  
+            max-width:1200px;
+            flex-direction:row;
+            margin-left: auto;
+            margin-right: auto;
+            /*----------- informacion de contacto -----------*/
+    
+            .footer-contact{
+    
+                width:215px;
+                &__logo{
+
+                }
+    
+                &__span{
+
+                }
+    
+                &__list{
+
+                }
+    
+                &__dir{
+
+                }
+    
+                &__item{
+
+                }
+            }
+    
+            /* --------------- Redes sociales --------------- */
+    
+            .cont-social{
+    
+                &__title{
+
+                }
+    
+                .social-cont{
+    
+                    &__item{
+
+                    }
+    
+                    &__item:not(:last-child){
+                        margin-right: 10px;
+                    }
+    
+                    &__icon{
+
+                    }
+                }
+    
+            }
+    
+            /* -------------- Formulario  -------------- */
+    
+            .form-email{
+                width: 670px;
+    
+                .footer-form{
+                    display:flex;
+                    flex-direction:row;
+                    
+
+    
+                    // &__title{
+
+                    // }
+    
+                     &__input{
+                        width: 358px;
+                        margin-right: 12px;
+
+                     }
+    
+                     &__button{ 
+                        width:200px
+                     }
+    
+                    // &__span{
+
+                    // }
+    
+                    // &__icon {
+
+                    // }
+                }
+            }
+        }       
+    }
+    
 }
 
 
