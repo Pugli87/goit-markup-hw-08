@@ -204,13 +204,19 @@
     /* --------------- Contenedor de tarjetas --------------- */
     
     .card{
+       // width: 370px;
         margin-top: 50px;
         display: flex;
         flex-wrap: wrap;
-        width: 350;
-        gap: 24px;
+        gap: 30px;
+
+        .card__item:not(:last-child) {
+            margin-bottom: 0px;
+        }
     
         &__item{
+            width: 370px;
+            margin-bottom:0;
             cursor: pointer;
             background-color: variables.$background-primary;
             flex-basis: calc((100% - 60px) / 3);
