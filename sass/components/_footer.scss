@@ -329,10 +329,12 @@
 
                 flex-direction: column;
                 width: 570px;
+                height: 86px;
     
                 .footer-form{
+                    width: 358px;   
+                    margin-left: 104px;
                     display:flex;
-                    flex-direction:row;
 
                     &__title {
                         text-align: initial;
@@ -340,7 +342,7 @@
     
                     &__input{
                         width: 358px;
-                        margin-right: 12px;
+                        //margin-right: 12px;
                         margin-bottom: 0px;
                     }
 

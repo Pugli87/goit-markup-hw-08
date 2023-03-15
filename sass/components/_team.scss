@@ -9,7 +9,7 @@
     margin-right: auto;
 
 
-    &__list{   
+    &__list{
         padding: 0;
         display: flex;
         flex-direction: column;
@@ -17,7 +17,11 @@
         background-color: variables.$background-botton;
     }
 
-   &__item{
+    &__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+
+    &__item{   
         background-color: variables.$background-primary;    
         width: 100%;
         flex-direction: column;
@@ -90,11 +94,18 @@
             flex-wrap: wrap;
             gap: 30px;
         }
+
+        &__item:not(:last-child) {
+            margin-bottom: 0px;
+        }
         
 
-        &__item{
+
+        &__item{            
+            margin-bottom: 0px;
             flex-basis: calc((100% - 30px) /2);
-        }
+        }        
+
 
 
         .text-cont{
