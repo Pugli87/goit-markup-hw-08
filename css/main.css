@@ -1360,10 +1360,14 @@ img {
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    width: 350;
-    gap: 24px;
+    gap: 30px;
+  }
+  .card .card__item:not(:last-child) {
+    margin-bottom: 0px;
   }
   .card__item {
+    width: 370px;
+    margin-bottom: 0;
     cursor: pointer;
     background-color: #ffffff;
     flex-basis: calc((100% - 60px) / 3);
