@@ -583,6 +583,11 @@ img {
     line-height: 16px;
   }
 }
+@media (min-width: 1200px) {
+  .modal {
+    width: 528px;
+  }
+}
 .hero {
   width: 100%;
   margin-left: auto;
@@ -1311,8 +1316,6 @@ img {
 @media (max-width: 479px) {
   .section-briefcase {
     min-width: 280px;
-    margin-left: auto;
-    margin-right: auto;
   }
   .briefcase {
     max-width: 280px;
